@@ -1,0 +1,25 @@
+{
+  "name": "js--rxjs-reactive-programming",
+  "version": "0.0.0",
+  "description": "Notes repo for 'Reactive programming with RxJs' book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vvscode/js--rxjs-reactive-programming.git"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvscode/js--rxjs-reactive-programming/issues"
+  },
+  "homepage": "https://github.com/vvscode/js--rxjs-reactive-programming#readme",
+  "dependencies": {
+    "rx": "^4.0.7"
+  }
+}
