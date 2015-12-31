@@ -51,7 +51,7 @@ function makeTweetElement(tweetObj) {
  */
 
 function initialize() {
-  //var socket = Rx.DOM.fromWebSocket('ws://127.0.0.1:8080');
+  var socket = Rx.DOM.fromWebSocket('ws://127.0.0.1:8080');
   var QUAKE_URL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/' +
     'summary/all_day.geojsonp';
 
@@ -89,17 +89,17 @@ function initialize() {
           mag: quake.properties.mag
         };
       });
-      //socket.onNext(JSON.stringify({ quakes: quakesData }));
+      socket.onNext(JSON.stringify({ quakes: quakesData }));
     });
 
-  //socket
-  //  .map(function(message) {
-  //    return JSON.parse(message.data);
-  //  })
-  //  .subscribe(function(data) {
-  //    var container = document.getElementById('tweet_container');
-  //    container.insertBefore(makeTweetElement(data), container.firstChild);
-  //  });
+  socket
+    .map(function(message) {
+      return JSON.parse(message.data);
+    })
+    .subscribe(function(data) {
+      var container = document.getElementById('tweet_container');
+      container.insertBefore(makeTweetElement(data), container.firstChild);
+    });
 
   var table = document.getElementById('quakes_info');
 

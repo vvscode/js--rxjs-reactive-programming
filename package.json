@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/vvscode/js--rxjs-reactive-programming#readme",
   "dependencies": {
-    "rx": "^4.0.7"
+    "rx": "^4.0.7",
+    "twit": "^2.1.1",
+    "ws": "^1.0.0"
   }
 }
